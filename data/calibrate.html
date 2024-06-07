@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RC plane</title>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="landscape"/>
+	<link href='calibrate.css' rel='stylesheet' type='text/css'>
+    <meta content='width=device-width, initial-scale=1.0, Maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <script src="calibrate.js" type="text/javascript"></script>
+</head>
+<body>
+<center>
+<br>
+<br>
+<button id = "start_btn" onclick = "accelro_start();"> start</button>
+<br>
+<table style="width: 50%; margin-top: 10px; font-size: 1.5em; font-family: impact" border="1px">
+<tr>
+<td>sensor data</td>
+<td rowspan = "8"><br><input type = "range" id = "throttle" class = "enabled" min = "0" max = "180" step = "1" value = "0"></td>
+</tr>
+<tr>
+<td>X axis: <span id = "orientation_x">0</span></td>
+</tr><tr>
+<td>y axis: <span id = "orientation_y">0</span></td>
+</tr><tr>
+<td>z axis: <span id = "orientation_z">0</span></td>
+</tr>
+<tr><br></tr>
+<tr>
+<td>Max X: <span id = "Max_x">0</span> min X: <span id ="Min_x">0</span></td>
+</tr><tr>
+<td>Max y: <span id = "Max_y">0</span> min y: <span id ="Min_y">0</span></td>
+</tr><tr>
+<td>Max z: <span id = "Max_z">0</span> min z: <span id ="Min_z">0</span></td>
+</tr>
+</table>
+<br>
+<button id = "calidone" onclick = "cali_finish();">lock calibration</button>
+</body>
+</html>
